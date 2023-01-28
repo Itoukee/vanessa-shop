@@ -1,22 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "ESNext",
-    "module": "CommonJS",
-    "lib": ["esnext"],
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "strict": false,
-    "strictNullChecks": true,
+    "lib": ["ES2022"],
+    "module": "commonjs",
+    "target": "ES2022",
+    "strict": true,
+    "noImplicitAny": true,
     "resolveJsonModule": true,
-    "skipDefaultLibCheck": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "outDir": "./dist",
-    "strictPropertyInitialization": false,
-    "paths": {
-      "~/*": ["./src/*"],
-      "~~/*": ["./*"]
-    }
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["./@types/express", "./node_modules/@types"]
   },
+  "files": ["src/@types/index.d.ts"],
+  "lib": ["ES2022"]
 }
