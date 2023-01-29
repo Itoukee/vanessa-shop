@@ -31,15 +31,25 @@ interface IConfig {
      */
     fileSizeLimit?: number;
   };
+
+  jwtAuthentication: {
+    secretKey: string;
+    expiresIn: number | string;
+  };
 }
 
 const config: IConfig = {
   env: { local: "local", prod: "prod" },
-  frontUrl: { local: "http://localhost:4200/", prod: "" },
-  backUrl: { local: "http://localhost:3000/", prod: "" },
+  frontUrl: { local: "http://localhost:4200/", prod: "TODO MAN" },
+  backUrl: { local: "http://localhost:3000/", prod: "TODO BUDDY" },
   mongoUri: {
     local: process.env.MONGO_URI || "",
     prod: process.env.MONGO_URI || "",
+  },
+  // jwtoken authentication configuration
+  jwtAuthentication: {
+    secretKey: process.env.JWT_SECRET_KEY || "TODO MAN",
+    expiresIn: process.env.JWT_EXPIRES_IN || 86400,
   },
 
   rateLimit: {
